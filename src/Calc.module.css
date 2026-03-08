@@ -1,0 +1,51 @@
+.MyButtonA{
+    --background-color: lightslategray;
+    /*--background-color: */
+    /*color: ;*/
+    /*color: ;*/
+}
+.MyButtonB{
+    --background-color: dimgray;
+}
+
+.keyPad{
+    display: grid;
+    grid-template-columns: repeat(4, fit-content(100%));
+    gap: 6px;
+    border: 10px ridge #d5d5d5;
+    width: fit-content;
+    padding: 6px;
+    border-radius: 6px;
+}
+
+.ButtonWide{
+    grid-column: span 2;
+    width: 100%;
+}
+
+.ButtonHigh{
+    grid-row: span 2;
+    height: 100%;
+}
+
+.Display {
+    background-color: black;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    outline: 1px solid red;
+    outline-offset: -5px;
+    border-radius: 4px;
+}
+
+.Container1{
+    background-color: #282c34;
+    border: 10px dimgray groove;
+    border-radius: 10px;
+}
+
+.Container2{
+    background-color: #d5d5d5;
+    padding: 25px;
+    border-radius: 20px;
+    border: 5px #989898 outset;
+}

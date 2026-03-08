@@ -1,0 +1,244 @@
+.indicator{
+    --color-active: red;
+    --color-inactive: gray;
+    --length: 20px;
+    --width-ratio: 0.3;
+    --dot-radius: calc(var(--length) / 10);
+    --dot-padding: calc(var(--dot-radius) / 2);
+    --width: calc(var(--length) * var(--width-ratio));
+    --full-cut: var(--width);
+    --half-cut: calc(var(--width) / 2);
+    --padding: 2px;
+    --small-padding: calc(var(--half-cut) / 2);
+    --debug-border-width: 1px;
+}
+
+.segment:hover{
+    background-color: var(--color-inactive);
+}
+
+.segment{
+    display: inline-block;
+    background-color: var(--color-active);
+    corner-shape: bevel;
+}
+
+.segmentVertical {
+    width: var(--width);
+    height: var(--length);
+}
+
+.segmentHorizontal {
+    width: var(--length);
+    height: var(--width);
+}
+
+.indicatorInner .segment {
+    position: absolute;
+}
+
+.segmentA{
+    border-radius: 0 0 var(--full-cut) var(--full-cut);
+    top: 0;
+    left: var(--padding);
+}
+
+.segmentB{
+    border-radius: var(--full-cut) 0 var(--half-cut) var(--half-cut);
+    top: var(--padding);
+    right: 0;
+}
+
+.segmentC{
+    border-radius: var(--half-cut) var(--half-cut) 0 var(--full-cut);
+    bottom: var(--padding);
+    right: 0;
+}
+
+.segmentD{
+    border-radius: var(--full-cut) var(--full-cut) 0 0;
+    bottom: 0;
+    left: var(--padding);
+}
+
+.segmentE{
+    border-radius: var(--half-cut) var(--half-cut) var(--full-cut) 0;
+    bottom: var(--padding);
+    left: 0;
+}
+
+.segmentF{
+    border-radius: 0 var(--full-cut) var(--half-cut) var(--half-cut);
+    top: var(--padding);
+    left: 0;
+}
+
+.segmentG{
+    border-radius: var(--half-cut) var(--half-cut) var(--half-cut) var(--half-cut);
+    width: calc(var(--length) + 2 * var(--half-cut) - 2 * var(--full-cut));
+    left: calc(var(--width) / 2 + var(--padding));
+    top: calc(var(--length) - var(--half-cut) + 2 * var(--padding));
+
+}
+
+.segmentDot{
+    width: calc(var(--dot-radius) * 2);
+    height: calc(var(--dot-radius) * 2);
+    border-radius: 100%;
+    corner-shape: round;
+    bottom: 0;
+    right: calc(-1 * var(--dot-padding) - 2 * var(--dot-radius));
+}
+
+.indicatorInner{
+    border: var(--debug-border-width) solid black;
+    display: inline-block;
+    width: calc(var(--length) + 2 * var(--padding));
+    height: calc(2 * var(--length) + 4 * var(--padding));
+    position: relative;
+    box-sizing: content-box;
+}
+.indicator{
+    display: inline-block;
+    text-align: unset;
+    width: calc(var(--length) + 2 * var(--padding) + 2 * var(--dot-radius) + 2 * var(--dot-padding) + 2 * var(--debug-border-width));
+    height: calc(2 * var(--length) + 4 * var(--padding) + 2 * var(--debug-border-width));
+}
+
+.indicator .indicatorInner .segmentA{
+    background-color: var(--segment-a-color);
+}
+
+.indicator .indicatorInner .segmentB{
+    background-color: var(--segment-b-color);
+}
+
+.indicator .indicatorInner .segmentC{
+    background-color: var(--segment-c-color);
+}
+
+.indicator .indicatorInner .segmentD{
+    background-color: var(--segment-d-color);
+}
+
+.indicator .indicatorInner .segmentE{
+    background-color: var(--segment-e-color);
+}
+
+.indicator .indicatorInner .segmentF{
+    background-color: var(--segment-f-color);
+}
+
+.indicator .indicatorInner .segmentG{
+    background-color: var(--segment-g-color);
+}
+
+.indicator .indicatorInner .segmentDot{
+    background-color: var(--segment-dot-color);
+}
+
+.indicator{
+    --segment-a-color: var(--color-inactive);
+    --segment-b-color: var(--color-inactive);
+    --segment-c-color: var(--color-inactive);
+    --segment-d-color: var(--color-inactive);
+    --segment-e-color: var(--color-inactive);
+    --segment-f-color: var(--color-inactive);
+    --segment-g-color: var(--color-inactive);
+    --segment-dot-color: var(--color-inactive);
+}
+
+.indicator[data-number="1"]{
+    --segment-b-color: var(--color-active);
+    --segment-c-color: var(--color-active);
+}
+
+.indicator[data-number="2"]{
+    --segment-a-color: var(--color-active);
+    --segment-b-color: var(--color-active);
+    --segment-d-color: var(--color-active);
+    --segment-e-color: var(--color-active);
+    --segment-g-color: var(--color-active);
+}
+
+.indicator[data-number="3"]{
+    --segment-a-color: var(--color-active);
+    --segment-b-color: var(--color-active);
+    --segment-c-color: var(--color-active);
+    --segment-d-color: var(--color-active);
+    --segment-g-color: var(--color-active);
+}
+
+.indicator[data-number="4"]{
+    --segment-b-color: var(--color-active);
+    --segment-c-color: var(--color-active);
+    --segment-f-color: var(--color-active);
+    --segment-g-color: var(--color-active);
+}
+
+.indicator[data-number="5"]{
+    --segment-a-color: var(--color-active);
+    --segment-c-color: var(--color-active);
+    --segment-d-color: var(--color-active);
+    --segment-f-color: var(--color-active);
+    --segment-g-color: var(--color-active);
+}
+
+.indicator[data-number="6"]{
+    --segment-a-color: var(--color-active);
+    --segment-c-color: var(--color-active);
+    --segment-d-color: var(--color-active);
+    --segment-e-color: var(--color-active);
+    --segment-f-color: var(--color-active);
+    --segment-g-color: var(--color-active);
+}
+
+.indicator[data-number="7"]{
+    --segment-a-color: var(--color-active);
+    --segment-b-color: var(--color-active);
+    --segment-c-color: var(--color-active);
+}
+
+.indicator[data-number="8"]{
+    --segment-a-color: var(--color-active);
+    --segment-b-color: var(--color-active);
+    --segment-c-color: var(--color-active);
+    --segment-d-color: var(--color-active);
+    --segment-e-color: var(--color-active);
+    --segment-f-color: var(--color-active);
+    --segment-g-color: var(--color-active);
+}
+
+.indicator[data-number="9"]{
+    --segment-a-color: var(--color-active);
+    --segment-b-color: var(--color-active);
+    --segment-c-color: var(--color-active);
+    --segment-d-color: var(--color-active);
+    --segment-f-color: var(--color-active);
+    --segment-g-color: var(--color-active);
+}
+
+.indicator[data-number="0"]{
+    --segment-a-color: var(--color-active);
+    --segment-b-color: var(--color-active);
+    --segment-c-color: var(--color-active);
+    --segment-d-color: var(--color-active);
+    --segment-e-color: var(--color-active);
+    --segment-f-color: var(--color-active);
+}
+
+.indicator[data-number="e"]{
+    --segment-a-color: var(--color-active);
+    --segment-d-color: var(--color-active);
+    --segment-e-color: var(--color-active);
+    --segment-f-color: var(--color-active);
+    --segment-g-color: var(--color-active);
+}
+
+.indicator[data-number="-"]{
+    --segment-g-color: var(--color-active);
+}
+
+.indicator[data-dot-active="true"]{
+    --segment-dot-color: var(--color-active);
+}
