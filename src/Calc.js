@@ -98,27 +98,27 @@ export default function Calc() {
                 <Display size={9} className={classes.Display} value={value}/>
                 <div className={classes.keyPad}>
                     <Button className={classes.MyButtonB} text={"C"} onClick={clear}></Button>
-                    <Button className={classes.MyButtonB} text={"÷"} onClick={divide}></Button>
-                    <Button className={classes.MyButtonB} text={"×"} onClick={multiply}> </Button>
-                    <Button className={classes.MyButtonB} text={"←"} onClick={removeDigit}></Button>
+                    <Button className={`${classes.MyButtonB} ${classes.BiggerFont}`} text={"÷"} onClick={divide}></Button>
+                    <Button className={`${classes.MyButtonB} ${classes.BiggerFont}`} text={"×"} onClick={multiply}> </Button>
+                    <Button className={`${classes.MyButtonB} ${classes.BiggerFont}`} text={"←"} onClick={removeDigit}></Button>
 
                     <Button className={classes.MyButtonA} text={7} onClick={addNumber}></Button>
                     <Button className={classes.MyButtonA} text={8} onClick={addNumber}></Button>
                     <Button className={classes.MyButtonA} text={9} onClick={addNumber}></Button>
-                    <Button className={classes.MyButtonB} text={"-"} onClick={minus}></Button>
+                    <Button className={`${classes.MyButtonB} ${classes.BiggerFont}`} text={"-"} onClick={minus}></Button>
 
                     <Button className={classes.MyButtonA} text={4} onClick={addNumber}></Button>
                     <Button className={classes.MyButtonA} text={5} onClick={addNumber}></Button>
                     <Button className={classes.MyButtonA} text={6} onClick={addNumber}></Button>
-                    <Button className={classes.MyButtonB} text={"+"} onClick={plus}></Button>
+                    <Button className={`${classes.MyButtonB} ${classes.BiggerFont}`} text={"+"} onClick={plus}></Button>
 
                     <Button className={classes.MyButtonA} text={1} onClick={addNumber}></Button>
                     <Button className={classes.MyButtonA} text={2} onClick={addNumber}></Button>
                     <Button className={classes.MyButtonA} text={3} onClick={addNumber}></Button>
-                    <Button className={`${classes.MyButtonB} ${classes.ButtonHigh}`} text={"EN TER"} onClick={count}></Button>
+                    <Button className={`${classes.MyButtonB} ${classes.ButtonHigh}`} text={"E\nN\nT\nE\nR"} onClick={count}></Button>
 
                     <Button className={`${classes.MyButtonA} ${classes.ButtonWide}`} text={0} onClick={addNumber}></Button>
-                    <Button className={classes.MyButtonA} text={"."} onClick={dot}></Button>
+                    <Button className={`${classes.MyButtonA} ${classes.LargeFont}`} text={"."} onClick={dot}></Button>
                 </div>
             </div>
         </div>

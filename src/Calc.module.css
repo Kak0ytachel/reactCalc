@@ -26,6 +26,9 @@
 .ButtonHigh{
     grid-row: span 2;
     height: 100%;
+    line-height: 24px;
+    white-space: pre-line;
+    font-size: 24px;
 }
 
 .Display {
@@ -35,6 +38,17 @@
     outline: 1px solid red;
     outline-offset: -5px;
     border-radius: 4px;
+}
+
+
+.BiggerFont{
+    font-size: 32px;
+
+}
+
+.LargeFont{
+    font-size: 48px;
+    line-height: 32px;
 }
 
 .Container1{
@@ -48,4 +62,6 @@
     padding: 25px;
     border-radius: 20px;
     border: 5px #989898 outset;
+    box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide');
+
 .Button {
     --text-color: black;
     --background-color: rosybrown;
@@ -7,6 +9,7 @@
 }
 
 .Button {
+    color: #d30303;
     /*color: */
     display: inline-block;
     width: var(--size);
@@ -16,8 +19,9 @@
     text-align: center;
     line-height: 48px;
     font-size: 24px;
-    color: var(--text-color);
-    font-family: sans-serif;
+    /*color: var(--text-color);*/
+    font-family: "Audiowide", sans-serif;
+    /*text-shadow: 2px 2px 4px #000000;*/
     cursor: pointer;
     border: 6px outset black;
     /*padding: 8px;*/

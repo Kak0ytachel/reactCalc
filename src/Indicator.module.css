@@ -1,6 +1,6 @@
 .indicator{
     --color-active: red;
-    --color-inactive: gray;
+    --color-inactive: rgba(211, 211, 211, 0.16);
     --length: 20px;
     --width-ratio: 0.3;
     --dot-radius: calc(var(--length) / 10);
