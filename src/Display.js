@@ -62,7 +62,9 @@ export default function Display({size= 10, value = null, className = ''}) {
 
 
     const indicators = [];
+    // console.log(zeroIndex, move);
     for (let j = 0; j < size; j++) {
+        // console.log('index j', j)
         let number;
         let isDotActive;
         let i = j + (isPowerShown? powerSize : 0);
@@ -73,8 +75,11 @@ export default function Display({size= 10, value = null, className = ''}) {
             if (i === size) {
                 number = 'e';
             } else {
+                let numIndex = powerSize - (i - size - 1) - 2;
 
-                number = Math.floor(power / 10 ** (i - size) % 10);
+                // console.log('powerSize', powerSize)
+                // console.log('numIndex i', numIndex)
+                number = Math.floor(power / 10 ** (numIndex) % 10);
                 // console.log(number);
             }
 
